@@ -1,0 +1,25 @@
+From c4ce105b907f26a8da850e5ab5a48102ec875ba4 Mon Sep 17 00:00:00 2001
+From: alvin <alvin.artus@groupe-dsa.com>
+Date: Thu, 28 Nov 2013 16:15:16 +0100
+Subject: [PATCH] Commit salle espace
+
+---
+ salles.php | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/salles.php b/salles.php
+index 2517ea4..0d262f4 100755
+--- a/salles.php
++++ b/salles.php
+@@ -18,7 +18,7 @@ require_once ('ariane.php');
+ ?>
+ 		
+ 
+-<div class="row">
++				<div class="row">
+ 					<div class="col-xs-12">
+ 						<div class="widget-box">
+ 							<div class="widget-title">
+-- 
+1.8.3.2
+
