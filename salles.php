@@ -16,8 +16,6 @@ require_once ('ariane.php');
  $reponse36  = $bdd->query('SELECT * FROM salle');
 
 ?>
-		
-
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="widget-box">

@@ -45,7 +45,8 @@ echo '<div class="row">
 									<div class="form-group">
 										<label class="control-label">Nouveau nom de salle </label>
 										<div class="controls">
-											<input type="text" class="form-control input-sm" placeholder="'.$donnees['noms'].'" />
+											<input type="text" class="form-control input-sm" name="new_salles" placeholder="'.$donnees['noms'].'" />
+											<input type="hidden" class="form-control input-sm" name="action" value="modif_salles"/>
 										</div>
 									</div>
 										
