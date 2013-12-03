@@ -47,7 +47,7 @@ echo '<tr>
 										<a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><i class="icon-user icon-white"></i> Action <span class="caret"></span></a>
 										<ul class="dropdown-menu dropdown-primary">
 										<li><a href="editer_salle.php?modifiersalles='.$donnees['idsalle'].'"><i class="icon-pencil"></i> Editer</a></li>
-										<li><a href="action_gestion_salle.php?supprsalle='.$donnees['idsalle'].'"><i class="icon-trash"></i> Suprimer</a></li>
+										<li><a href="suppr_salle.php?supprsalle='.$donnees['idsalle'].'"><i class="icon-trash"></i> Suprimer</a></li>
 										</ul>
 										</div>
 

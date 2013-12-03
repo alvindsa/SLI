@@ -24,7 +24,7 @@ if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
   
    
   case '2':
-  $redir = 'javascript:history.back();';
+  $redir = 'salles.php';
   $msg = '<b>Erreur,</b>é<br />Nous n\'avons pas pu uploader votre avatar!Si le probl&egrave;me persiste, contacter un admin..<br />Vous serez redirigé vers l\'inscription dans <b>'.$time.'</b> secondes...';
   break;
   

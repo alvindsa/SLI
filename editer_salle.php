@@ -15,7 +15,8 @@ require_once ('ariane.php');
 
 if (is_numeric($_GET['modifiersalles']))
 {
-
+	
+// Mise en variable de la salle
 $salles = $_GET['modifiersalles'];
 
 
@@ -47,12 +48,19 @@ echo '<div class="row">
 										<div class="controls">
 											<input type="text" class="form-control input-sm" name="new_salles" placeholder="'.$donnees['noms'].'" />
 											<input type="hidden" class="form-control input-sm" name="action" value="modif_salles"/>
+											<input type="hidden" class="form-control input-sm" name="id_salles" value="'.$donnees['idsalle'].'" />
 										</div>
 									</div>
 										
 									
 									<div class="form-actions">
-										<button type="submit" class="btn btn-primary btn-sm">Save</button>
+
+										
+										
+										
+										<a href="javascript:history.back()"><button type="submit" class="btn">Retour<a></button>
+										<button type="submit" class="btn btn-primary btn-sm">Valider</button>
+									
 									</div>
 								</form>
 							</div>

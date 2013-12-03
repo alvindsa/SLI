@@ -9,7 +9,7 @@ require_once('style_switcher.php');
 require_once ('ariane.php');
 
 if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
- $time = 5;
+ $time = 2;
  
 
 
@@ -23,9 +23,10 @@ if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
   
    
   case '2':
-  $redir = 'javascript:history.back();';
-  $msg = '<b>Erreur,</b>é<br />Nous n\'avons pas pu uploader votre avatar!Si le probl&egrave;me persiste, contacter un admin..<br />Vous serez redirigé vers l\'inscription dans <b>'.$time.'</b> secondes...';
+  $redir = 'salles.php';
+  $msg = '<b>Mofification effectué ! </b>Vous allez être redirigé dans<br /> <b>'.$time.'</b> secondes...';
   break;
+
   
  case '3': //mot de passe non-cocordant
   $redir = 'index.php';

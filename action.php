@@ -11,17 +11,15 @@ require_once('style_switcher.php');
 
 require_once ('ariane.php');
 
- 	$time = 5;
+ 	$time = 2;
 
 
 
- switch($_POST['action']){
+switch($_POST['action'] || $_GET['action']){
 
+case 'ajout_salle': // Lors de l'ajout d'une salle
 
-  case 'ajout_salle': //mot de passe non-cocordant
-
-
-if (isset($_POST['nom_salle']) and !empty($_POST['nom_salle']))
+  if (isset($_POST['nom_salle']) and !empty($_POST['nom_salle']))
 	{
 
 	$salle = $_POST['nom_salle'];
@@ -49,43 +47,49 @@ NULL ,  '".$salle."'
   break;
   
    
+  
+
+
+
   case 'modif_salles':
-  
-
-if (isset($_POST['nom_salle']) and !empty($_POST['nom_salle']))
+  // Si on à affaire a une modification de salle on execute les instructions suivantes.
+  if (isset($_POST['new_salles']) and !empty($_POST['new_salles']))
   {
-
-  $salle = $_POST['nom_salle'];
-
- mysql_query("INSERT INTO `dsa`.`salle` (
-`idsalle` ,
-`noms`)
-VALUES (
-NULL ,  '".$salle."'
-);")or die (mysql_error());
-
-// la salle a été ajouté redirection 
-
- echo '<meta http-equiv="refresh" content="0; URL=redirection_succes.php?redirection=1" />';
-  
-
-
+  // Mise en variable 
+  $id = $_POST['id_salles'];
+  $salle = $_POST['new_salles'];
+  //Modification dans la BASE
+   mysql_query("UPDATE `dsa`.`salle` SET `noms` = '".$salle."' WHERE `idsalle` = '".$id."';")or die (mysql_error());
+  // la salle a été ajouté redirection 
+  echo '<meta http-equiv="refresh" content="0; URL=redirection_succes.php?redirection=2" />';
   }
   else 
   {
 
     echo '<meta http-equiv="refresh" content="0; URL=redirection_error.php?redirection=1" />';
   }
-
-
-
-
-
-
   break;
   
  
+ case 'suppr_salles':
+  // Si on à affaire a une modification de salle on execute les instructions suivantes.
+  if (isset($_POST['supprsalle']) and !empty($_POST['supprsalle']) and is_numeric($_POST['supprsalle']))
+  {
+  // Mise en variable 
+ 
+  $salle = $_POST['supprsalle'];
 
+  //Modification dans la BASE
+   mysql_query('DELETE FROM dsa.salle WHERE salle.idsalle = '.$salle)or die (mysql_error());
+  // la salle a été ajouté redirection 
+  echo '<meta http-equiv="refresh" content="0; URL=redirection_succes.php?redirection=20" />';
+  }
+  else 
+  {
+
+    echo '<meta http-equiv="refresh" content="0; URL=redirection_error.php?redirection=10" />';
+  }
+  break;
 
  case '3': //mot de passe non-cocordant
   $redir = 'index.php';
