@@ -15,7 +15,7 @@ require_once ('ariane.php');
 
 
 
-switch($_POST['action'] || $_GET['action']){
+switch($_POST['action']){
 
 case 'ajout_salle': // Lors de l'ajout d'une salle
 

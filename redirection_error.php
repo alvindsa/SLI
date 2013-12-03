@@ -28,7 +28,7 @@ if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
   $msg = '<b>Erreur,</b>é<br />Nous n\'avons pas pu uploader votre avatar!Si le probl&egrave;me persiste, contacter un admin..<br />Vous serez redirigé vers l\'inscription dans <b>'.$time.'</b> secondes...';
   break;
   
- case '3': //mot de passe non-cocordant
+  case '3': //mot de passe non-cocordant
   $redir = 'index.php';
   $msg = '<b>ID non valide<br /><br />Vous allez être redirigé dans <b>'.$time.'</b> secondes...';
   break;
