@@ -89,13 +89,13 @@ echo '<tr>
 								<h5>Ajout d'une salle dans la base</h5>
 							</div>
 							<div class="widget-content nopadding">
-								<form action="action.php" method="post" class="form-horizontal">
+								<form action="action.php" method="POST" class="form-horizontal">
 							
 									
 									<div class="form-group">
 										<label class="control-label">Nom de la salle ?</label>
 										<div class="controls">
-											<input type="text" class="form-control input-sm" placeholder="Entré Ici le noms de la salle" name="nom_salle" />
+											<input type="text" class="form-control input-sm" placeholder="Entré Ici le noms de la salle" name="ajout_salle" />
 											<input type="hidden" class="form-control input-sm" name='action' value='ajout_salle'/>
 										</div>
 										

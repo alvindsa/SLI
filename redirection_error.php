@@ -1,6 +1,12 @@
 
 <?php
 
+// Fichier servant au erreur de redirection 
+
+
+
+
+
 require_once('header.php');
 
 require_once ('sidebar.php');

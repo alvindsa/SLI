@@ -14,7 +14,7 @@ $lienPasOK = "./redirection.php?redirection=2";
 try
 {
     // On se connecte à MySQL
-    $bdd = new PDO('mysql:host=localhost;dbname=dsa', 'root', 'fridoo');
+    $bdd = new PDO('mysql:host=localhost;dbname=dsa', 'root', 'fridoo3620');
 
   $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
@@ -25,7 +25,7 @@ try
 
 $adresse = 'localhost';
 $nom = 'root';
-$motdepasse = 'fridoo';
+$motdepasse = 'fridoo3620';
 $database = 'dsa';
 
 mysql_connect($adresse, $nom, $motdepasse);
