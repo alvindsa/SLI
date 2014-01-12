@@ -64,12 +64,10 @@ echo '<tr>
       </tr>';
 }
 
-?>
-
-										
+?>				
 										
 									</tbody>
-								</table>							
+								</table>						
 							</div>
 						</div>
 					</div>
@@ -89,7 +87,7 @@ echo '<tr>
 								<h5>Ajout d'une salle dans la base</h5>
 							</div>
 							<div class="widget-content nopadding">
-								<form action="action.php" method="POST" class="form-horizontal">
+								<form action="actionsalle.php" method="POST" class="form-horizontal">
 							
 									
 									<div class="form-group">
