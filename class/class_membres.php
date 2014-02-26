@@ -1,20 +1,42 @@
-<?
-class Membres
-  private $_nom;
-  private $_prenom;
-  private $_mail;
-  private $_;
+<?php
+class Membres {
 
-  const FORCE_PETITE = 20;
-  const FORCE_MOYENNE = 50;
-  const FORCE_GRANDE = 80;
+	private $_id;
+  	private $_nom;
+  	private $_prenom;
+  	private $_mail;
+  	private $_mdp ;
+  	private $_key;
+  	private $_siren;
+  	private $_adresse;
+  	private $_code_postal;
+  	private $_ville;
 
- public function __construct($forceInitiale)
+
+ 
+public function setMDP($mdp)
 {
- $this->setForce($forceInitiale);
- }
+    $this->_mdp = $mdp;
+    return $this;
+}
 
-  
+public function getMDP()
+{
+    return  $this->_mdp;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
   public function setForce($force)  {
     // On vérifie qu'on nous donne bien soit une « FORCE_PETITE », soit une « FORCE_MOYENNE », soit une « FORCE_GRANDE ».
   if (in_array($force, array(self::FORCE_PETITE, self::FORCE_MOYENNE, self::FORCE_GRANDE)))
@@ -39,6 +61,9 @@ class Membres
   {
     echo 'Je vais tous vous tuer !';
   }
+
+
+
 } 
 
 
