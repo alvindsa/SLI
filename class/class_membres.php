@@ -12,19 +12,51 @@ class Membres {
   	private $_code_postal;
   	private $_ville;
 
-
- 
-public function setMDP($mdp)
+public function get_ID()
 {
-    $this->_mdp = $mdp;
+    return $this->_id;
+}
+
+public function setID($id)
+{
+    $this->_id = $id;
+    return $this;
+}
+ 
+
+
+public function getNOM()
+{
+    return $this->_nom;
+}
+
+public function setNOM($nom)
+{
+    $this->_nom = $nom;
     return $this;
 }
 
-public function getMDP()
+public function getPRENOM()
 {
-    return  $this->_mdp;
+    return $this->_prenom;
 }
 
+public function setPRENOM($prenom)
+{
+    $this->_prenom = $prenom;
+    return $this;
+}
+
+public function getPRENOM()
+{
+    return $this->_prenom;
+}
+
+public function setPRENOM($prenom)
+{
+    $this->_prenom = $prenom;
+    return $this;
+}
 
 
 
