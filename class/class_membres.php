@@ -41,6 +41,7 @@ public function getPRENOM()
     return $this->_prenom;
 }
 
+<<<<<<< HEAD
 public function setPRENOM($prenom)
 {
     $this->_prenom = $prenom;
@@ -56,26 +57,33 @@ public function setPRENOM($prenom)
 {
     $this->_prenom = $prenom;
     return $this;
+=======
+public function getID()
+{
+    return $this->_id;
+>>>>>>> 1a3d9344dfadafd65a178cf69c9288c3e42db9dd
+}
+
+public function setID($id)
+{
+    $this->_ID = $id;
+    return $this;
 }
 
 
 
+public function getNOM()
+{
+    return $this->_NOM;
+}
+
+public function setNOM($NOM)
+{
+    $this->_nom = $NOM;
+    return $this;
+}
 
 
-
-
-
-
-
-
-
-  public function setForce($force)  {
-    // On vérifie qu'on nous donne bien soit une « FORCE_PETITE », soit une « FORCE_MOYENNE », soit une « FORCE_GRANDE ».
-  if (in_array($force, array(self::FORCE_PETITE, self::FORCE_MOYENNE, self::FORCE_GRANDE)))
-   {
-      $this->_force = $force;
-   }
-  }
 
 
 
