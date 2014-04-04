@@ -1,14 +1,14 @@
-</div></div>	
-		<div class="row">
-			<div id="footer" class="col-xs-12">
-				2012 - 2013 &copy; Solutions Loire Informatiques
-			</div>
-		</div>
-		
+</div>
+                  </div>
+            </div>
+            <div class="row">
+                  <div id="footer" class="col-xs-12">
+                        2012 - 2013 &copy; Unicorn Admin. Brought to you by <a href="https://wrapbootstrap.com/user/diablo9983">diablo9983</a>
+                  </div>
+            </div>
             
- 
-          
-       <script src="js/jquery.min.js"></script>
+            
+            <script src="js/jquery.min.js"></script>
             <script src="js/jquery-ui.custom.js"></script>
             <script src="js/bootstrap.min.js"></script>
             <script src="js/bootstrap-colorpicker.js"></script>
@@ -19,6 +19,5 @@
             <script src="js/jquery.nicescroll.min.js"></script>
             <script src="js/unicorn.js"></script>
             <script src="js/unicorn.form_common.js"></script>
-
-	</body>
+      </body>
 </html>

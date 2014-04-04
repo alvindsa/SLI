@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 	<head>
 		<title>Unicorn Admin</title>
 		<meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/font-awesome.css" />
-		<link rel="stylesheet" href="css/fullcalendar.css" />
-		<link rel="stylesheet" href="css/jquery.jscrollpane.css" />	
+        <link rel="stylesheet" href="css/colorpicker.css" />
+        <link rel="stylesheet" href="css/datepicker.css" />
+		<link rel="stylesheet" href="css/icheck/flat/blue.css" />
+		<link rel="stylesheet" href="css/select2.css" />
+		<link rel="stylesheet" href="css/jquery-ui.css" />		
 		<link rel="stylesheet" href="css/unicorn.css" />
-		<link rel="stylesheet" href="css/unicorn.grey.css" class="skin-color" />
+		<link rel="stylesheet" href="css/unicorn.grey.css" class="skin-color" />	
 	</head>
 	<body>
-
 
 <div id="header">
 			<h1><a href="./dashboard.html">SLI</a></h1>	
