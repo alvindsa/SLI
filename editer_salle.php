@@ -40,13 +40,13 @@ echo '<div class="row">
 								<h5>Ajout d\'une salle dans la base</h5>
 							</div>
 							<div class="widget-content nopadding">
-								<form action="action.php" method="post" class="form-horizontal">
+								<form action="action_update.php" method="post" class="form-horizontal">
 							
 									
 									<div class="form-group">
 										<label class="control-label">Nouveau nom de salle </label>
 										<div class="controls">
-											<input type="text" class="form-control input-sm" name="new_salles" placeholder="'.$donnees['noms'].'" />
+											<input type="text" class="form-control input-sm" name="nom_salle" placeholder="'.$donnees['noms'].'" />
 											<input type="hidden" class="form-control input-sm" name="action" value="modif_salles"/>
 											<input type="hidden" class="form-control input-sm" name="id_salles" value="'.$donnees['idsalle'].'" />
 										</div>

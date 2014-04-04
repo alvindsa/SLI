@@ -1,5 +1,5 @@
-<?
-
+<? 
+/*
 
   if (isset($_POST['nom_salle']) and !empty($_POST['nom_salle']))
   {
@@ -34,4 +34,6 @@ NULL ,  '".$salle."'
 
 
 include('footer.php');
+
+*/
 ?>

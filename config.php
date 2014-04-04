@@ -1,4 +1,5 @@
 <?php
+ error_reporting(E_ALL); 
 /* Inserer ici votre courriel  maxime.pain@aol.fr*/
 $to = "erazerdk@gmail.com";
 
@@ -14,22 +15,15 @@ $lienPasOK = "./redirection.php?redirection=2";
 try
 {
     // On se connecte à MySQL
-    $bdd = new PDO('mysql:host=localhost;dbname=dsa', 'root', 'fridoo3620');
+    $bdd = new PDO('mysql:host=localhost;dbname=dsa', 'root', 'fridoo');
 
   $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo 'Échec lors de la connexion : ' . $e->getMessage();
 }
 
-//identifiants
 
-$adresse = 'localhost';
-$nom = 'root';
-$motdepasse = 'fridoo3620';
-$database = 'dsa';
 
-mysql_connect($adresse, $nom, $motdepasse);
-mysql_select_db($database);
 
 function Send_Mail($dest, $subject , $content_txt, $content_html, $mail_from="noreply@maxime-pain.fr", $name_from="Maxime-Pain") 
 { 
