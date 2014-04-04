@@ -4,3 +4,13 @@
 
   // la salle a été ajouté redirection 
   //echo '<meta http-equiv="refresh" content="0; URL=redirection_succes.php?redirection=20" />';
+
+  //Modification dans la BASE
+   // mysql_query("UPDATE `dsa`.`salle` SET `noms` = '".$salle."' WHERE `idsalle` = '".$id."';")or die (mysql_error());
+
+
+
+   / la salle a été ajouté redirection 
+
+ // echo '<meta http-equiv="refresh" content="0; URL=redirection_succes.php?redirection=1" />';
+  //echo '<meta http-equiv="refresh" content="0; URL=redirection_error.php?redirection=20" />';

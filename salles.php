@@ -2,7 +2,7 @@
 
 session_start();
 
-require('config.php');
+require_once('config.php');
 
 require_once('header.php');
 
@@ -87,14 +87,14 @@ echo '<tr>
 								<h5>Ajout d'une salle dans la base</h5>
 							</div>
 							<div class="widget-content nopadding">
-								<form action="actionsalle.php" method="POST" class="form-horizontal">
+								<form action="action_add_salle.php" method="POST" class="form-horizontal">
 							
 									
 									<div class="form-group">
 										<label class="control-label">Nom de la salle ?</label>
 										<div class="controls">
 											<input type="text" class="form-control input-sm" placeholder="Entré Ici le noms de la salle" name="ajout_salle" />
-											<input type="hidden" class="form-control input-sm" name='action' value='ajout_salle'/>
+	
 										</div>
 										
 									

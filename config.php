@@ -1,5 +1,8 @@
 <?php
- error_reporting(E_ALL); 
+
+session_start(); 
+error_reporting(E_ALL); 
+
 /* Inserer ici votre courriel  maxime.pain@aol.fr*/
 $to = "erazerdk@gmail.com";
 
