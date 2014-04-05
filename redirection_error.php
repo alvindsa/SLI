@@ -35,8 +35,8 @@ if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
   break;
   
   case '3': //mot de passe non-cocordant
-  $redir = 'index.php';
-  $msg = '<b>ID non valide<br /><br />Vous allez être redirigé dans <b>'.$time.'</b> secondes...';
+  $redir = 'salles.php';
+  $msg = '<b>Echec lors de la suppressionde la salle <br /><br />Vous allez être redirigé dans <b>'.$time.'</b> secondes...';
   break;
   
   

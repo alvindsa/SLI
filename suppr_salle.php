@@ -11,6 +11,16 @@ require_once('style_switcher.php');
 
 require_once ('ariane.php');
 
+if (is_numeric ($_GET['supprsalle'])) 
+{
+	
+
+$salle = $_GET['supprsalle'];
+$reponse36  = $bdd->query('SELECT * FROM salle WHERE idsalle = '.$salle);
+ $donnees = $reponse36->fetch();
+
+} else exit;
+
 ?>
 
 
@@ -22,20 +32,22 @@ require_once ('ariane.php');
 								<span class="icon">
 									<i class="icon-align-justify"></i>									
 								</span>
-								<h5>Rest of elements...</h5>
+								<h5>Supprimer ?</h5>
 							</div>
 							<div class="widget-content nopadding">
-								<form action="#" method="get" class="form-horizontal">
+								<form action="action_suppr.php" method="POST" class="form-horizontal">
 									
                                     
 									<div class="form-group">
-										<label class="control-label">Radio inputs</label>
+										<label class="control-label">Voulez vous supprimer la salle <?php echo $donnees['noms']; ?></label>
 										<div class="controls">
-											<label><input type="radio" name="radios" checked/> Checked</label>
-											<label><input type="radio" name="radios" /> Unchecked</label>
-											<label class="disabled"><input type="radio" name="radios2" checked disabled> Checked disabled</label>
-											<label class="disabled"><input type="radio" name="radios2" disabled> Unchecked disabled</label>
+											<label><input type="radio" name="radios" checked/> Oui</label>
+											<label><input type="radio" name="radios" disabled /> Non</label>
+										
+	
 										</div>
+										<input type="hidden" class="form-control input-sm" placeholder="Entré Ici le noms de la salle" name="id_salle" value="<?php echo $salle; ?>"/>
+	
 									</div>
 									
 									
