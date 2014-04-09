@@ -6,8 +6,8 @@
 					<a href="#"><i class="icon-beaker"></i> <span>Aministration</span> <i class="arrow icon-chevron-right"></i></a>
 					<ul>
 						<li><a href="salles.php">Liste des salles</a></li>
-						<li><a href="jquery-ui.html">Gestion des salles</a></li>
-						<li><a href="buttons.html">Buttons &amp; icons</a></li>
+						
+						<li><a href="logiciel.php">Logiciel</a></li>
 
 						<li><a href="interface.html">Interface Elements</a></li>
 						<li><a href="jquery-ui.html">jQuery UI</a></li>
