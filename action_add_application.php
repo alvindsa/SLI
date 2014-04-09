@@ -4,23 +4,19 @@ require_once ('config.php');
  if (isset($_POST['ajout_application']) and !empty($_POST['ajout_application']))
  {
  	// mise en variable et test de la confomité du nom
-  	$salle = $_POST['ajout_salle'];
+  	$application = $_POST['ajout_application'];
+  	
+  	$salle = NULL;
+    $salle = $_POST['salle'];
 
- 	$req = $bdd->prepare('INSERT INTO salle VALUES(:nom, :id_salle)');
-	$req->execute(array(
-   'nom' => NULL,
-   'id_salle' => $salle
-   )) or die(print_r($req->errorInfo()));
+ $niveau = '';
+    if (!empty($_POST['niveau']))
+    { 
+    	$niveau = $_POST['niveau']; 
 
-// La salle à bien été ajouté rediretion
- echo '<meta http-equiv="refresh" content="0; URL=redirection_succes.php?redirection=1" />';
- }
- else 
- {
+	}
 
-echo '<meta http-equiv="refresh" content="0; URL=redirection_error.php?redirection=1" />'; 
- }
-
-
+print_r ($_POST['salle']);
+}
 
 ?>

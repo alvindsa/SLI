@@ -45,8 +45,9 @@ $reponse38  = $bdd->query('SELECT * FROM niveau');
 {
 
 echo '<tr>
-       <td>'.$donnees['noms'].'</td>
+       <td>'.$donnees['nom'].'</td>
        <td>'.$donnees['salle'].'</td>
+       <td>'.$donnees['niveau'].'</td>
        <td>
 
 										<div class="btn-group">
@@ -66,7 +67,7 @@ echo '<tr>
 
 
        </td>
-       
+        
       </tr>';
 }
 
@@ -93,19 +94,19 @@ echo '<tr>
 								<h5>Ajout d'une logiciel dans la base</h5>
 							</div>
 							<div class="widget-content nopadding">
-								<form action="action_add_salle.php" method="POST" class="form-horizontal">
+								<form action="action_add_application.php" method="POST" class="form-horizontal">
 							
 									
 									<div class="form-group">
 										<label class="control-label">Nom </label>
 										<div class="controls">
-											<input type="text" class="form-control input-sm" placeholder="Entré Ici le noms de la salle" name="ajout_salle" required />
+											<input type="text" class="form-control input-sm" placeholder="Entré Ici le noms de la salle" name="ajout_application" required />
 	
 										</div>
 										<div class="form-group">
 										<label class="control-label">Ajout d'une salle</label>
 										<div class="controls">
-											<select multiple name="salle" >
+											<select name="salle[]" multiple='multiple'>
 
 											<?php
 											 while ($donnees2 = $reponse37->fetch())
