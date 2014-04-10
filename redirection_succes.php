@@ -41,15 +41,19 @@ if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
  
  case '4':
   $redir = 'index.php';
-  $msg = '<b>Salle Supprimer</b> <br />
+  $msg = '<b>Logiciel Ajouté</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
   break;
    
-     case '5':
-  $redir = 'index.php';
-  $msg = '<b>Désoler vous ne pouvez pas accéder a cette page !</b> <br />
+ case '5':
+  $redir = 'logiciel.php';
+  $msg = '<b>Logiciel suprimer !</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
-						 break;
+  break;
+   
+
+
+    
    case '6':
   $redir = 'admin/episode.php';
   $msg = '<b>La serie é bien été ajouter meréi</b> <br />

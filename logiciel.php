@@ -46,7 +46,20 @@ $reponse38  = $bdd->query('SELECT * FROM niveau');
 
 echo '<tr>
        <td>'.$donnees['nom'].'</td>
-       <td>'.$donnees['salle'].'</td>
+       <td>';
+
+          $var = unserialize($donnees['salle']);
+
+       
+     foreach ($var as $salle) {
+     	echo $salle.'  ';
+     	# code...
+     }
+       
+
+
+
+       echo '</td>
        <td>'.$donnees['niveau'].'</td>
        <td>
 

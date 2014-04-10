@@ -13,12 +13,12 @@ require_once ('config.php');
    )) or die(print_r($req->errorInfo()));
 
 // La salle à bien été ajouté rediretion
- echo '<meta http-equiv="refresh" content="0; URL=redirection_succes.php?redirection=1" />';
+ echo '<meta http-equiv="refresh" content="0; URL=redirection_succes.php?redirection=4" />';
  }
  else 
  {
 
-echo '<meta http-equiv="refresh" content="0; URL=redirection_error.php?redirection=1" />'; 
+echo '<meta http-equiv="refresh" content="0; URL=redirection_error.php?redirection=4" />'; 
  }
 
 

@@ -36,17 +36,16 @@ if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
   
   case '3': //mot de passe non-cocordant
   $redir = 'salles.php';
-  $msg = '<b>Echec lors de la suppressionde la salle <br /><br />Vous allez être redirigé dans <b>'.$time.'</b> secondes...';
+  $msg = '<b>Echec lors de la suppression<br /><br />Vous allez être redirigé dans <b>'.$time.'</b> secondes...';
   break;
   
   
   
+case '4': //mot de passe non-cocordant
+  $redir = 'logiciel.php';
+  $msg = '<b>Echec lors de la suppression<br /><br />Vous allez être redirigé dans <b>'.$time.'</b> secondes...';
+  break; 
  
- case '4':
-  $redir = 'index.php';
-  $msg = '<b>Nouvelle candidat(e) ajoutée</b> <br />
-                        Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
-  break;
    
      case '5':
   $redir = 'index.php';
