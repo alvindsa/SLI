@@ -55,8 +55,8 @@ if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
 
     
    case '6':
-  $redir = 'admin/episode.php';
-  $msg = '<b>La serie é bien été ajouter meréi</b> <br />
+  $redir = 'niveau.php';
+  $msg = '<b>Le niveau à bien été ajouté</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
 						 break;
 						  case '7':

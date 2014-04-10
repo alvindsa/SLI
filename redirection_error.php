@@ -53,8 +53,8 @@ case '4': //mot de passe non-cocordant
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
 						 break;
    case '6':
-  $redir = 'admin/episode.php';
-  $msg = '<b>La serie é bien été ajouter meréi</b> <br />
+  $redir = 'niveau.php';
+  $msg = '<b>Erreur pendant l\'ajout du niveau</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
 						 break;
 						  case '7':

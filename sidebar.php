@@ -9,7 +9,7 @@
 						
 						<li><a href="logiciel.php">Logiciel</a></li>
 
-						<li><a href="interface.html">Interface Elements</a></li>
+						<li><a href="niveau.php">Niveau</a></li>
 						<li><a href="jquery-ui.html">jQuery UI</a></li>
 						<li><a href="buttons.html">Buttons &amp; icons</a></li>
 
