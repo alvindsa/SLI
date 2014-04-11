@@ -7,16 +7,22 @@ require_once ('config.php');
   	$application = $_POST['ajout_application'];
   	
   	$salle = NULL;
-    $salle = $_POST['salle'];
-    $array_salle = serialize($salle);
- 	$niveau = '';
+
+     
+
  	$version = '';
 
     if (!empty($_POST['niveau']))
     { 
-    	$niveau = $_POST['niveau']; 
+    	$niveau = serialize($_POST['niveau']); 
 
 	}
+
+if (!empty($_POST['salle']))
+    { 
+      $array_salle = serialize($_POST['salle']);
+
+  }
 
  	$req = $bdd->prepare('INSERT INTO application VALUES(:id, :nom, :salle, :niveau, :version)');
 	$req->execute(array(

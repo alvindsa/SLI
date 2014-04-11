@@ -48,19 +48,24 @@ echo '<tr>
        <td>'.$donnees['nom'].'</td>
        <td>';
 
-          $var = unserialize($donnees['salle']);
-
-       
+      $var = unserialize($donnees['salle']);
+  
      foreach ($var as $salle) {
-     	echo $salle.' ';
+     	echo $salle.' ,';
      	# code...
      }
        
 
-
-
        echo '</td>
-       <td>'.$donnees['niveau'].'</td>
+       <td>';
+  
+ $var2 = unserialize($donnees['niveau']);   
+ foreach ($var2 as $niveau) {
+     	echo $niveau .' ,';
+     	# code...
+     }
+
+        echo '</td>
        <td>
 
 										<div class="btn-group">
@@ -69,19 +74,7 @@ echo '<tr>
 										<li><a href="editer_salle.php?modifiersalles='.$donnees['id'].'"><i class="icon-pencil"></i> Editer</a></li>
 										<li><a href="suppr_salle.php?supprsalle='.$donnees['id'].'"><i class="icon-trash"></i> Suprimer</a></li>
 										</ul>
-										</div>
-
-
-
-
-
-
-
-
-
-       </td>
-        
-      </tr>';
+										</div></td></tr>';
 }
 
 ?>				
@@ -133,12 +126,12 @@ echo '<tr>
 									<div class="form-group">
 										<label class="control-label">Niveau (Arborescence)</label>
 										<div class="controls">
-											<select multiple name="niveau">
+											<select multiple name="niveau[]">
 
 											<?php
 											 while ($donnees3 = $reponse38->fetch())
 											{
-										echo '<option>'.$donnees2['noms'].'</option>';
+										echo '<option>'.$donnees3['niveau'].'</option>';
 												
 											}
 												?>
