@@ -71,8 +71,8 @@ echo '<tr>
 										<div class="btn-group">
 										<a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><i class="icon-user icon-white"></i> Action <span class="caret"></span></a>
 										<ul class="dropdown-menu dropdown-primary">
-										<li><a href="editer_salle.php?modifiersalles='.$donnees['id'].'"><i class="icon-pencil"></i> Editer</a></li>
-										<li><a href="suppr_salle.php?supprsalle='.$donnees['id'].'"><i class="icon-trash"></i> Suprimer</a></li>
+										<li><a href="editer_salle.php?modifierapplication='.$donnees['id'].'"><i class="icon-pencil"></i> Editer</a></li>
+										<li><a href="suppr_application.php?application='.$donnees['id'].'"><i class="icon-trash"></i> Suprimer</a></li>
 										</ul>
 										</div></td></tr>';
 }
