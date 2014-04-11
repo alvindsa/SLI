@@ -57,11 +57,13 @@ case '4': //mot de passe non-cocordant
   $msg = '<b>Erreur pendant l\'ajout du niveau</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
 						 break;
-						  case '7':
-  $redir = 'index.php';
-  $msg = '<b>Vous étes maintenant déconnecté</b> <br />
-                        Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
-						break;
+						
+
+            case '7': //mot de passe non-cocordant
+  $redir = 'logiciel.php';
+  $msg = '<b>Echec lors de la suppression<br /><br />Vous allez être redirigé dans <b>'.$time.'</b> secondes...';
+  break; 
+  
 						case '8':
   $redir = 'index.php';
   $msg = '<b>La categorie a bien été supprimé</b> <br />

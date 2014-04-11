@@ -59,11 +59,12 @@ if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
   $msg = '<b>Le niveau à bien été ajouté</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
 						 break;
-						  case '7':
-  $redir = 'index.php';
-  $msg = '<b>Vous étes maintenant déconnecté</b> <br />
+						  
+              case '7':
+  $redir = 'logiciel.php';
+  $msg = '<b>Logiciel Supprimé</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
-						break;
+  break;
 						case '8':
   $redir = 'index.php';
   $msg = '<b>La categorie a bien été supprimé</b> <br />
