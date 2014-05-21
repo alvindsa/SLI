@@ -18,7 +18,7 @@ $lienPasOK = "./redirection.php?redirection=2";
 try
 {
     // On se connecte à MySQL
-    $bdd = new PDO('mysql:host=195.154.9.57;dbname=dsa', 'dsa', 'dsadsa');
+    $bdd = new PDO('mysql:host=91.121.86.147;dbname=dsa', 'dsa', 'dsadsa');
 
   $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
