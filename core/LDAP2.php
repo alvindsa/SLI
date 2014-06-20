@@ -1,7 +1,7 @@
 <?php
 $ldapServer = 'ldap://SRV-PEDA1.stmartin.local';
 $login  = 'alvinp';   // user
-$pass = 'alm77gbv';  // password
+$pass = '****';  // password
 $baseDN = "CN=Users,DC=stmartin,DC=local";
 $caractère="@";
 $domain="stmartin";
