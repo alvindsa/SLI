@@ -78,13 +78,23 @@ $ldapbind = @ldap_bind($ds, $loginldap, $pass);
  if ($ldapbind)
  {
   $SESSION="Vous etes connecté"; // est identifié par LDAP
+ 
+setcookie('pseudo', $login, time() + 365*24*3600, null, null, false, true); // On écrit un cookie
+setcookie('pays', 'France', time() + 365*24*3600, null, null, false, true); // On écrit un autre cookie...
+
+echo '<meta http-equiv="refresh" content="0; URL=../redirection_success.php?redirection=10" />';
+
+
  }
  else 
  { 
-  $SESSION="Le mot de passe est faux ! "; // n'est pas identifié par LDAP
+ 
+ echo '<meta http-equiv="refresh" content="0; URL=../redirection_error.php?redirection=10" />';
 }
  
-  echo $SESSION;
+ 
+
+
 
 
 ldap_close($ds);

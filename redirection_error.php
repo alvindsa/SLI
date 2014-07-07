@@ -70,8 +70,8 @@ case '4': //mot de passe non-cocordant
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
 						break;
 						case '10':
-  $redir = 'index.php';
-  $msg = '<b>Le candidat a bien été supprimé</b> <br />
+  $redir = './login/index.html';
+  $msg = '<b>Vérrifier vos identifiants !</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
 						break;
 						case '9':

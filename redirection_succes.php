@@ -75,15 +75,17 @@ if(isset($_GET['redirection']) AND is_numeric($_GET['redirection'])){
   $msg = '<b>Le candidat a bien été supprimé</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
 						break;
-						case '9':
-  $redir = 'panel/index.php';
-  $msg = '<b>Le sponsor a bien été modifié</b> <br />
-                        Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
-						break;
-						case '10':
+
+
+case '10':
   $redir = 'index.php';
-  $msg = '<b>Vous devez étre connecté pour voir cette page !</b> <br />
+  $msg = '<b>Vous êtes maintenant connecté</b> <br />
                         Vous serez redirigé vers '.$redir.' dans <b>'.$time.'</b> secondes...';
+            break;
+
+
+
+					
 						break;
 						
 						case '11':
