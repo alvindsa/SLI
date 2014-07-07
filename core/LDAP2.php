@@ -1,18 +1,28 @@
 <?php
+
+
+
+
+/*
 $ldapServer = 'ldap://SRV-PEDA1.stmartin.local';
 $login  = 'alvinp';   // user
-$pass = '****';  // password
+$pass = 'alm77gbv';  // password
 $baseDN = "CN=Users,DC=stmartin,DC=local";
 $caractère="@";
 $domain="stmartin";
 $loginldap = $login.$caractère.$domain;
+*/
 
+if (isset($_POST['login']))
+{
+$ldapServer = 'ldap://SRV-PEDA1.stmartin.local';
+$login = $_POST['login'];
+$pass = $_POST['pass'];
+$caractère="@";
+$domain="stmartin";
+$loginldap = $login.$caractère.$domain;
 
-
-
-function connect_ldap ($ldapServer)
-  {
-$ds= ldap_connect ($ldapServer); 
+$ds= ldap_connect($ldapServer); 
 ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3);
 ldap_set_option($ds, LDAP_OPT_REFERRALS, 0);
 ldap_set_option($ds, LDAP_OPT_NETWORK_TIMEOUT, 10);
@@ -21,22 +31,25 @@ ldap_set_option($ds, LDAP_OPT_NETWORK_TIMEOUT, 10);
     { 
 
       if (ldap_set_option($ds, LDAP_OPT_PROTOCOL_VERSION, 3) AND ldap_set_option($ds, LDAP_OPT_REFERRALS, 0))
-       echo '<p>Version LDAPv3</p>';
-  
-       else
-       {
+      {
+
+      }
+         else
+        {
         echo '<p>Impossible de modifier la version du protocole à 3</p>';// Attachement anonyme
-       }
-    } else 
-    {
+        }
+    }
+   else 
+      {
        echo "Connexion LDAP ... ECHEC";
-   }
-   return $ds;
-}
+       }
 
-connect_ldap($ldapServer);
-$ldapbind = ldap_bind($ds, $loginldap, $pass);
 
+
+
+
+$ldapbind = @ldap_bind($ds, $loginldap, $pass);
+/*
  if ($ldapbind) {
         $filter="(sAMAccountName=$login)";
         $result = ldap_search($ds,$baseDN,$filter);
@@ -56,11 +69,32 @@ $ldapbind = ldap_bind($ds, $loginldap, $pass);
     } else {
         $msg = "Invalid email address / password";
         echo $msg;
+        $exit=1;
     }
 	   
-  
+  */
 
+ 
+ if ($ldapbind)
+ {
+  $SESSION="Vous etes connecté"; // est identifié par LDAP
+ }
+ else 
+ { 
+  $SESSION="Le mot de passe est faux ! "; // n'est pas identifié par LDAP
+}
+ 
+  echo $SESSION;
 
 
 ldap_close($ds);
+
+}
+else 
+
+{
+
+  echo "aucun login entré";
+
+}
 ?>
